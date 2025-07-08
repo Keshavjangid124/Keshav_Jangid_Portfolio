@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Header*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #0f0f0f;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff5f00;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+header nav ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #ff5f00;
+}
+
+/*  Buttons */
+.btn-hire,
+.btn-contact,
+.contact-form button {
+  padding: 10px 20px;
+  background: #ff5f00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-hire:hover,
+.btn-contact:hover,
+.contact-form button:hover {
+  background: #e14c00;
+}
+
+.btn-contact {
+  display: inline-block;
+  padding: 10px 25px;
+  text-decoration: none;
+}
+
+/*  Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 60px 60px;
+  min-height: 100vh;
+  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ff5f00;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.hero-content .btns button {
+  margin-right: 15px;
+  padding: 10px 20px;
+  border: 2px solid #ff5f00;
+  background: none;
+  color: #ff5f00;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero-content .btns button:hover {
+  background: #ff5f00;
+  color: white;
+}
+
+.hero-image img {
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border: 4px solid #ff5f00;
+}
+
+/* Stats Section*/
+.stats {
+  display: flex;
+  justify-content: space-around;
+  background: #1f1f1f;
+  padding: 40px 0;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.stats div {
+  flex: 1;
+}
+
+.stats h3 {
+  color: #ff5f00;
+  font-size: 2rem;
+}
+
+.stats p {
+  color: #ccc;
+}
+
+/*  Shared Section Styles */
+.about,
+.portfolio,
+.contact,
+.skills {
+  padding: 60px;
+  background: #1a1a1a;
+  text-align: center;
+}
+
+.about h2,
+.portfolio h2,
+.contact h2,
+.skills h2 {
+  font-size: 2.5rem;
+  color: #ff5f00;
+  margin-bottom: 20px;
+}
+
+.about p,
+.portfolio p,
+.contact p {
+  color: #ccc;
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+/*  Skills Section */
+.skills h2 {
+  margin-bottom: 30px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.skill-card {
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: default;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  background: #333;
+}
+
+.skill-card i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ff5f00;
+}
+
+.skill-card p {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ccc;
+  margin: 0;
+}
+
+/* Portfolio Section */
+.portfolio-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.portfolio-items .item {
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-items .item:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-items .item i {
+  font-size: 2rem;
+  color: #ff5f00;
+  margin-bottom: 10px;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background: #2a2a2a;
+  color: #fff;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #888;
+}
+
+/*  Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0f0f0f;
+  color: #888;
+}
+
+/*  Light Mode */
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #111;
+}
+
+body.light-mode header {
+  background: #fff;
+}
+
+body.light-mode .hero,
+body.light-mode .about,
+body.light-mode .portfolio,
+body.light-mode .contact,
+body.light-mode .skills,
+body.light-mode footer {
+  background-color: #fff;
+  color: #111;
+}
+
+body.light-mode .contact-form input,
+body.light-mode .contact-form textarea {
+  background: #eee;
+  color: #111;
+  border: 1px solid #ccc;
+}
+
+body.light-mode header nav ul li a {
+  color: #333;
+}
+
+body.light-mode .btn-hire,
+body.light-mode .btn-contact,
+body.light-mode .contact-form button {
+  background-color: #ff5f00;
+  color: #fff;
+}
+
+body.light-mode .skill-card {
+  background: #eee;
+  color: #111;
+}
+
+body.light-mode .skill-card:hover {
+  background: #ddd;
+}
+
+body.light-mode .skill-card p {
+  color: #111;
+}
+
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 15px 30px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    background: #1a1a1a;
+    position: absolute;
+    right: 30px;
+    top: 70px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+  }
+
+  header nav ul.active {
+    display: flex;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 100px 30px 30px;
+  }
+
+  .hero-content,
+  .hero-image {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .portfolio-items {
+    flex-direction: column;
+    align-items: center;
+  }
+}
